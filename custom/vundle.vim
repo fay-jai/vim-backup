@@ -5,7 +5,6 @@ Plugin 'VundleVim/Vundle.vim' " Let Vundle manage Vundle, required
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'lambdatoast/elm.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -17,6 +16,7 @@ call vundle#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set completeopt-=preview " Remove preview pane for tern_for_vim
 autocmd vimenter * NERDTree " Open nerdtree automatically when VIM starts up
+autocmd vimenter * wincmd p " After opening nerdtree on startup, move cursor to other window
 
 " Shortcut for toggling nerdtree
 nnoremap <c-n> :NERDTreeToggle<cr> 
